@@ -97,11 +97,12 @@ def Plot(shape, name, col, legend_lable,count,outputfile):
 
 #input and outputs
 input=os.getcwd() + os.sep + 'DATA' + os.sep + 'GBIF_processed_Checklists' + os.sep + 'GBIF_FADA_Vertebrates_Mammals.xlsx'
-outpath = os.getcwd() + os.sep + 'DATA' + os.sep + 'Maps'+ os.sep + 'GBIF_FADA_Vertebrates_Mammals' + os.sep
+outpath = os.getcwd() + os.sep + 'DATA' + os.sep + 'Maps'+ os.sep + 'GBIF_FADA_Macrophytes' + os.sep
 outputfile1=outpath+'GBIF_FADA_Vertebrates_Mammals_occurrence_world.png'
 outputfile2=outpath  + 'GBIF_FADA_Vertebrates_Mammals_occurrence_world_log.png'
 outputfile3=outpath+'GBIF_FADA_Vertebrates_Mammals_species_world_log.png'
 outputfile4=outpath+'GBIF_FADA_Vertebrates_Mammals_counts.xlsx'
+
 
 #get a list of country codes fom GBIF
 country=[]
@@ -115,6 +116,7 @@ speciesList=df['speciesKey'].dropna()
 speciesList = list(set(filter(None, speciesList)))
 #make sure the search keys are of dtype = int
 speciesList=list(map(int, speciesList))
+print(len(speciesList))
 #get a high definition map with the same country codes as GBIF - here an external map already formated -- too big to load to github
 world_map = gpd.read_file('/Users/privateprivate/SAEON/GBIF/data/ipbes_regions_subregions_shape_1.1/IPBES_Regions_Subregions2.shp')
 country_shapes = world_map[['geometry', 'ISO_3','ISO_2']]
