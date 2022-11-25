@@ -4,7 +4,7 @@ A small set of GBIF API processing scripts
 
 Quick description and example
 -----------------
-Due to the vast number of species in many taxon groups, manual downloading is too costly. So instead, the GBIF API python client (https://www.gbif.org/tool/OlyoYyRbKCSCkMKIi4oIT/pygbif-gbif-python-client) is used here to automate the extraction and processing of information using simple exmaples.  
+Due to the vast number of species in many taxon groups, manual downloading is too costly. So instead, the GBIF API python client (https://www.gbif.org/tool/OlyoYyRbKCSCkMKIi4oIT/pygbif-gbif-python-client) is used here to automate the extraction and processing of information using simple examples.  
 
 **1. TaxonMatch.py**
 
