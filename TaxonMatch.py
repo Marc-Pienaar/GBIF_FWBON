@@ -43,8 +43,8 @@ def process(i,speciesList):
 	speciesKeyCount='' #A vriable to return the number of occurences for this species if it exists	
 	#pre-popoulate some values
 	vals['input']=x
-	vals['count_usageKey']=0
-	vals['count_speciesKey']=0
+	vals['count_usageKey']=''
+	vals['count_speciesKey']=''
 	try:
 		x=x.rstrip();x=x.lstrip()
 		key = species.name_backbone(x)
@@ -53,19 +53,19 @@ def process(i,speciesList):
 			s = occ.search(speciesKey = key['speciesKey'], limit=0)
 			speciesKeyCount =s['count']
 		except:
-			speciesKeyCount='ERROR'
+			speciesKeyCount=''
 		vals['count_usageKey']=out['count']
 		vals['count_speciesKey']=speciesKeyCount
 		for a in attributes:
 			if a in key:
 				vals[a] = key[a]
 			else:
-				vals[a] = 'ERROR'
+				vals[a] = ''
 		for v in vals.keys():
 			temp.append(vals[v])
 	except:
 		for a in attributes:
-			vals[a] = 'ERROR'
+			vals[a] = ''
 		for v in vals.keys():
 			temp.append(vals[v])
 	output.append(temp)	
