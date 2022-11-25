@@ -6,7 +6,7 @@ Quick description and example
 -----------------
 Due to the vast number of species in many taxon groups, manual downloading is too costly. So instead, the GBIF API python client (https://www.gbif.org/tool/OlyoYyRbKCSCkMKIi4oIT/pygbif-gbif-python-client) is used here to automate the extraction and processing of information using simple examples.  
 * *GBIF world shapefile* - [minimum value]([https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min](https://drive.google.com/drive/folders/1qzxtfi3RE3WD1xSWmqT-bfT2B-l9gOr4?usp=share_link)) attribute.
-
+* *min* - [minimum value](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min) attribute.
 
 
 **1. TaxonMatch.py**
